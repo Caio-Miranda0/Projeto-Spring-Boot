@@ -11,9 +11,10 @@ import com.example.project.entities.User;
 @RequestMapping(value = "/users") // isso configura um endpoint /users
 public class UserResource {
 	
-	@GetMapping // isso diz que toda requisição http do tipo get vai invocar o método findAll
+	@GetMapping // isso diz que toda requisição http do tipo get vai invocar o método findAll; tmb pode ser um endpoint
 	public ResponseEntity<User> findAll() {
 		User user = new User(1,"Luana", "luana@email.com", "5562999999", "123456789");
 		return ResponseEntity.ok().body(user);
 	}
+	
 }
